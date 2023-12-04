@@ -4,10 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <link rel="stylesheet" href="{{ asset('/resources/css/testSax.css') }}">
         <title>test</title>
     </head>
     <style>
-        @import url("https://fonts.googleleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+            @import url("https://fonts.googleleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 *{
     margin: 0;
     padding: 0;
@@ -67,7 +68,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url(C:\xampp\htdocs\laravel8\resources\views\test\img\background-bg.jpg) center / cover;
+    background-image:url(https://4kwallpapers.com/images/walls/thumbs_3t/10201.jpg) center / cover;
     mix-blend-mode: multiply;
 }
 
@@ -195,8 +196,6 @@ body {
     transform: scale(0.95);
 }
 
-
-
     </style>
     <body>
         <div class="container">
@@ -204,7 +203,7 @@ body {
                 <div class="card-content">
                     <img src={{$ant}} alt="" />
                     <h1>ant of Patdanai 65122420026</h1>
-                    <button><a href="./im/Page more/PageLoginRegister.html">Click</a></button>
+                    <button><a href="#">Click</a></button>
                 </div>
             </div>
             <div class="effect"></div>
