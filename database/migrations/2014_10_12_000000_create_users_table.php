@@ -32,5 +32,9 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
+        $table->renameColumn('a', 'total_in_1m');        //เปลี่ยนชื่อ COLUMN
+            $table->text('remark')->nullable()->change();    //เปลื่ยน COLUMN TYPE
+            $table->dropColumn('c');                         //ลบ column ทิ้ง
+
     }
 }

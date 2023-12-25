@@ -1,7 +1,12 @@
 <?php
 
+use App\Http\Controllers\Covid19Controller;
 use App\Http\Controllers\MyProfileController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\QuizController;
+use App\Http\Controllers\StaffController;
+use App\Models\Product;
+use App\Models\Staff;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -134,5 +139,20 @@ Route::get( "/coronavirus" ,[ MyProfileController::class , "coronavirus" ] );
 //     return view("study/match", compact('codes','values','majors'));
 // })->name('study-match');
     
-Route::get("study-question", [ QuizController::class, "question" ])->name("study-question");
-Route::post("study-match", [ QuizController::class, "match" ])->name("study-match");
+//Route::get("study-question", [ QuizController::class, "question" ])->name("study-question");
+//Route::post("study-match", [ QuizController::class, "match" ])->name("study-match");
+
+//Route::get('/covid19', [ Covid19Controller::class,"index" ]);
+
+//Route::get("/staff", [StaffController::class, "index"])->name('product.index');
+// Route::get("/staff/create", [StaffController::class, "create"])->name('product.create');
+// Route::post("/staff", [StaffController::class, "store"])->name('product.store');
+// Route::get('/staff/{id}', [StaffController::class, "show"])->name('product.show');
+// Route::get("/staff/{id}/edit", [StaffController::class, "edit"])->name('product.edit');
+// Route::patch("/staff/{id}", [StaffController::class, "update"])->name('product.update');
+// Route::delete("/staff/{id}", [StaffController::class, "destroy"])->name('product.destroy');
+
+// Route::resource('/product', ProductController::class );
+
+Route::resource('/product', ProductController::class);
+Route::resource('/staff', StaffController::class);
