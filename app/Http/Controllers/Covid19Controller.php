@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Covid19;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -17,8 +18,9 @@ class Covid19Controller extends Controller
         //
         //$sql = "select * from covid19s";
         //$covid19s = DB::select($sql, []);
-        $covid19s = DB::table("covid19s")->get();
-    	
+        //$covid19s = DB::table("covid19s")->get();
+    	$covid19s = Covid19::get();
+
      return view('covid19/index' , compact('covid19s') );
     }
 
